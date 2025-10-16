@@ -12,7 +12,7 @@ def runFakultaet(number):
     print(f"{endTime - startTime} Sekunden")
 
 def runQuicksort(max):
-    print("======================== testQuicksort() =========================")
+    print("======================== runQuicksort() =========================")
 
     array = [random.randint(0, max) for _ in range(max)]
     sortedArray = array.copy()
@@ -23,16 +23,16 @@ def runQuicksort(max):
     startTime = time.perf_counter()
     print(f"Quicksort array:\t\t\t{quicksort(array)}")
     endTime = time.perf_counter()
-    print(f"{endTime - startTime} Sekunden")
+    print(f"{(endTime - startTime):.8f} Sekunden")
 
     startTime = time.perf_counter()
     print(f"Quicksort sorted array:\t\t{quicksort(sortedArray)}")
     endTime = time.perf_counter()
-    print(f"{endTime - startTime} Sekunden")
+    print(f"{(endTime - startTime):.8f} Sekunden")
     print("\n")
 
 def runQuicksortOptimized(max):
-    print("==================== testQuicksortOptimized() ====================")
+    print("==================== runQuicksortOptimized() ====================")
 
     array = [random.randint(0, max) for _ in range(max)]
     sortedArray = array.copy()
@@ -44,13 +44,13 @@ def runQuicksortOptimized(max):
     quicksortOptimized(array, 0, len(array) - 1)
     print(f"Quicksort array:\t\t\t{array}")
     endTime = time.perf_counter()
-    print(f"{endTime - startTime} Sekunden")
+    print(f"{(endTime - startTime):.8f} Sekunden")
 
     startTime = time.perf_counter()
     quicksortOptimized(sortedArray, 0, len(sortedArray) - 1)
     print(f"Quicksort sorted array:\t\t{sortedArray}")
     endTime = time.perf_counter()
-    print(f"{endTime - startTime} Sekunden")
+    print(f"{(endTime - startTime):.8f} Sekunden")
     print("\n")
 
 
