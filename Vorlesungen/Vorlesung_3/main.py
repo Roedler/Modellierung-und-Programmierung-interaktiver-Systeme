@@ -12,6 +12,8 @@ def testFakultaet(number):
     print(f"{endTime - startTime} Sekunden")
 
 def testQuicksort(max):
+    print("======================== testQuicksort() =========================")
+
     array = [random.randint(0, max) for _ in range(max)]
     sortedArray = array.copy()
     sortedArray.sort()
@@ -28,6 +30,12 @@ def testQuicksort(max):
     endTime = time.perf_counter()
     print(f"{endTime - startTime} Sekunden")
 
+def testQuicksortOptimized(max):
+    print("=================== testQuicksortOptimized() =====================")
+
+
+
 
 # testFakultaet(5)
 testQuicksort(10)
+testQuicksortOptimized(5)
