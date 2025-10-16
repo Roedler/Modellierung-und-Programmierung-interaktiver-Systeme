@@ -8,20 +8,21 @@ def quicksort(array):
 
     return quicksort(smaller) + equal + quicksort(bigger)
 
+def partition(array, low, high):
+    i = low - 1
+    pivot = array[high]
+
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i = i + 1
+            array[i], array[j] = array[j], array[i]
+
+    array[i + 1], array[high] = array[high], array[i + 1]
+    return i + 1
+
 def quicksortOptimized(array, low, high):
-    def partition(sub_arr, sub_low, sub_high):
-        i = sub_low - 1
-        pivot = sub_arr[sub_high]
-
-        for j in range(sub_low, sub_high):
-            if sub_arr[j] <= pivot:
-                i = i + 1
-                sub_arr[i], sub_arr[j] = sub_arr[j], sub_arr[i]
-
-        sub_arr[i + 1], sub_arr[sub_high] = sub_arr[sub_high], sub_arr[i + 1]
-        return i + 1
-
-    if low < high:
-        pi = partition(array, low, high)
-        quicksortOptimized(array, low, pi - 1)
-        quicksortOptimized(array, pi + 1, high)
+    if low >= high:
+        return
+    pi = partition(array, low, high)
+    quicksortOptimized(array, low, pi - 1)
+    quicksortOptimized(array, pi + 1, high)
