@@ -2,7 +2,9 @@ import random
 import time
 
 from Vorlesungen.Vorlesung_2.fakultaet import fakultaet
-from Vorlesungen.Vorlesung_3.quicksort import quicksort, quicksortOptimized
+from Vorlesungen.Vorlesung_3.Aufgaben.Aufgabe_3_1.quicksort import quicksort, quicksortOptimized
+from testMethod import testMethod
+
 
 def testFakultaet(number):
     print(f"Zahl:\t\t{number:_}")
@@ -57,3 +59,7 @@ def testQuicksortOptimized(max):
 # testFakultaet(5)
 testQuicksort(10)
 testQuicksortOptimized(10)
+
+
+# testMethod(fakultaet, 5)
+# testMethod(quicksort, [random.randint(0, 10) for _ in range(10)])
