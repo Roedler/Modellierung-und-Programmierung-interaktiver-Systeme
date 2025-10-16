@@ -40,12 +40,14 @@ def runQuicksortOptimized(max):
     print(f"Unsorted array:\t\t\t\t{array}")
 
     startTime = time.perf_counter()
-    print(f"Quicksort array:\t\t\t{quicksortOptimized(array, 0, len(array) - 1)}")
+    quicksortOptimized(array, 0, len(array) - 1)
+    print(f"Quicksort array:\t\t\t{array}")
     endTime = time.perf_counter()
     print(f"{endTime - startTime} Sekunden")
 
     startTime = time.perf_counter()
-    print(f"Quicksort sorted array:\t\t{quicksortOptimized(sortedArray, 0, len(sortedArray) - 1)}")
+    quicksortOptimized(sortedArray, 0, len(sortedArray) - 1)
+    print(f"Quicksort sorted array:\t\t{sortedArray}")
     endTime = time.perf_counter()
     print(f"{endTime - startTime} Sekunden")
     print("\n")
