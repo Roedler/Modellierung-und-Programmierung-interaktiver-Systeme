@@ -3,4 +3,4 @@
 .venv
 **/*.pdf
 **/*.md
-**/*.xls;xlsx;csv
+**/*.xlsx
