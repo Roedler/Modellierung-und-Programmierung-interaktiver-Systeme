@@ -7,3 +7,6 @@ def quicksort(array):
     bigger = [x for x in array[1:] if x > pivot]
 
     return quicksort(smaller) + equal + quicksort(bigger)
+
+# def quicksortOptimized(array):
+#

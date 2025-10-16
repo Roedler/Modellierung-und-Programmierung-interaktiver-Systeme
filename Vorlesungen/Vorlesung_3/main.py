@@ -29,6 +29,7 @@ def testQuicksort(max):
     print(f"Quicksort sorted array:\t\t{quicksort(sortedArray)}")
     endTime = time.perf_counter()
     print(f"{endTime - startTime} Sekunden")
+    print("\n")
 
 def testQuicksortOptimized(max):
     print("=================== testQuicksortOptimized() =====================")
