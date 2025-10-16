@@ -21,9 +21,7 @@ def quicksortOptimized(array, low, high):
         sub_arr[i + 1], sub_arr[sub_high] = sub_arr[sub_high], sub_arr[i + 1]
         return i + 1
 
-    if low >= high:
-        return array
-
-    pi = partition(array, low, high)
-    quicksortOptimized(array, low, pi - 1)
-    quicksortOptimized(array, pi + 1, high)
+    if low < high:
+        pi = partition(array, low, high)
+        quicksortOptimized(array, low, pi - 1)
+        quicksortOptimized(array, pi + 1, high)

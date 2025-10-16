@@ -32,7 +32,7 @@ def runQuicksort(max):
     print("\n")
 
 def runQuicksortOptimized(max):
-    print("=================== testQuicksortOptimized() =====================")
+    print("==================== testQuicksortOptimized() ====================")
     array = [random.randint(0, max) for _ in range(max)]
     sortedArray = array.copy()
     sortedArray.sort()
